@@ -48,8 +48,8 @@ public class Tests
     { 
         var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3000));
         
-        var TechSupportUrl = driver.FindElement(By.LinkText("Техподдержка"));
-        TechSupportUrl.Click();
+        var techSupportUrl = driver.FindElement(By.LinkText("Техподдержка"));
+        techSupportUrl.Click();
 
         wait.Until(ExpectedConditions.UrlContains("https://www.google.com"));
         
