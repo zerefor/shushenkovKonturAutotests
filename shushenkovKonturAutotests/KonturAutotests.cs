@@ -44,12 +44,12 @@ public class Tests
     
     [Test]
     //Данная проверка повторяет местами повторяет проверку авторизации, но здесь найден баг сайта.
-    public void CheckText()
+    public void TechsupportLink()
     { 
         var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3000));
         
-        var TechSupportUrl = driver.FindElement(By.LinkText("Техподдержка"));
-        TechSupportUrl.Click();
+        var techSupportUrl = driver.FindElement(By.LinkText("Техподдержка"));
+        techSupportUrl.Click();
 
         wait.Until(ExpectedConditions.UrlContains("https://www.google.com"));
         
@@ -90,7 +90,7 @@ public class Tests
     }
     
     [Test]
-    public void ProfileSaveButton()
+    public void CompanyAdress()
     {   
         var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3000));
         driver.FindElement(By.CssSelector("[data-tid='Title']"));
